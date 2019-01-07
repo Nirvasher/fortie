@@ -2,6 +2,8 @@
 
 # Fortie
 
+This is a fork of Fortie from wetcat-studios. The difference is that it has no XML-support.
+
 A simple [Fortnox](https://www.fortnox.se/) PHP package, including Laravel Service Provider for easy integration in Laravel.
 
 ## Installation
@@ -239,7 +241,6 @@ For details on the usage of all providers you should consult [the Wiki](https://
 This package is built with the following dependencies.
 
 * [Guzzle](https://github.com/guzzle/guzzle)
-* [sabre/xml](https://github.com/fruux/sabre-xml)
 
 ## Troubleshooting
 

@@ -93,7 +93,7 @@ abstract class ProviderBase
 
 
   /**
-   * Handle the response, whether it's JSON or XML.
+   * Handle the response, only JSON supported.
    */
   protected function handleResponse (\GuzzleHttp\Psr7\Response $response)
   {
@@ -101,12 +101,8 @@ abstract class ProviderBase
 
     if (in_array('application/json', $content_type)) {
       return json_decode($response->getBody());
-    }
-
-    else if (in_array('application/xml', $content_type)) {
-      $reader = new \Sabre\Xml\Reader();
-      $reader->xml($response->getBody());
-      return $reader->parse();
+    } else {
+      return 'Response handler not supported.';
     }
   }
 
